@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Entity
-@NamedQuery(name = "user_findall", query = "select u from users u")
 @Table(name = "users")
+@NamedQuery(name = "user_findall", query = "select u from User u")
 public class User {
 
 	@Id
