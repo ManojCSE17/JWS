@@ -33,7 +33,8 @@ public class JwsApplication implements CommandLineRunner {
 		// logger.info("Inserting User -> {}", repo.insert(new
 		// User("john.carpenter@company.com", "John Carpenter", "Male", "john@Cap4")));
 
-		logger.info("User john.carpenter@company.com -> {}", repo.findById("john.carpenter@company.com"));
+		// logger.info("User john.carpenter@company.com -> {}",
+		// repo.findById("john.carpenter@company.com"));
 
 		// logger.info("Updating tara.james@company.com -> {}", repo.update(new
 		// User("tara.james@company.com", "Tara James", "Female", "tAr@32c")));
