@@ -1,10 +1,8 @@
 <%@page import="com.company.jws.JWS.*" isELIgnored="false" %>
-
+<%@ include file="header-html.html" %>
 <html>
 	
 	<body>
-		
-		<jsp:include page="/header-html.html"></jsp:include>
 
     	<main>
 	        <div class="container py-4">
@@ -37,7 +35,7 @@
 		    </div>
         </main>
 		<br><br>
-		<jsp:include page="footer-html.html"></jsp:include>
-
+		
+		<%@ include file="footer-html.html" %>
 	</body>
 </html>

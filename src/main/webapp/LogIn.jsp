@@ -4,7 +4,7 @@
 <html>
 	<body>
 		
-		<jsp:include page="LogIn.html"></jsp:include>
+		<%@ include file="LogIn.html" %>
 		
 	</body>
 </html>

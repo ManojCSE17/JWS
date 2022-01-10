@@ -5,7 +5,7 @@
 <html>
 	<body>
 	
-		<jsp:include page="session-header.html"></jsp:include>	
+		<%@ include file="session-header.html" %>	
 		
 		<h1 class="text-center fw-light">JSP Basic</h1><br>
 		
@@ -36,8 +36,8 @@
 			<br> Lower case of "Hello" : <%= toLower("Hello") %>
 			
 		</div>
-
-		<jsp:include page="footer-html.html"></jsp:include>
+		
+		<%@ include file="footer-html.html" %>
 		
 	</body>
 </html>

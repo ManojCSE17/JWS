@@ -4,8 +4,8 @@
 <html>
 
 	<body>
-		<jsp:include page="SignUp.html"></jsp:include>
-		<jsp:include page="footer-html.html"></jsp:include>
+		<%@ include file="SignUp.html" %>
+		<%@ include file="footer-html.html" %>
 	</body>
 	
 </html>
