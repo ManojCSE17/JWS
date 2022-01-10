@@ -37,4 +37,22 @@ public class JwsController {
 		}
 
 	}
+
+	@PostMapping(value = "/signup")
+	public String registerUser(@RequestParam(name = "signinInputEmail") String email,
+			@RequestParam(name = "signinInputPassword") String password) {
+
+		User u = repos.findById(email);
+
+		if (u != null) {
+			if (u.getPassword().equals(password)) {
+				return "LogInResponse.jsp";
+			} else {
+				return "errorLogIn.jsp";
+			}
+		} else {
+			return "errorLogIn.jsp";
+		}
+
+	}
 }
