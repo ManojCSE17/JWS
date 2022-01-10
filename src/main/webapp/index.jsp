@@ -4,7 +4,7 @@
 	
 	<body>
 		
-		<jsp:include page="header-html.html"></jsp:include>
+		<jsp:include page="/header-html.html"></jsp:include>
 
     	<main>
 	        <div class="container py-4">
