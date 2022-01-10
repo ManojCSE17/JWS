@@ -1,5 +1,7 @@
 package com.company.jws.JWS;
 
+import java.util.regex.Pattern;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,11 +26,21 @@ public class JwsController {
 	public String logUser(@RequestParam(name = "signinInputEmail") String email,
 			@RequestParam(name = "signinInputPassword") String password) {
 
-		User u = repos.findById(email);
+		boolean emailValidation = Pattern.compile("^[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*(?:-[a-zA-Z0-9]+)*@company.com$")
+				.matcher(email).matches();
 
-		if (u != null) {
-			if (u.getPassword().equals(password)) {
-				return "LogInResponse.jsp";
+		boolean passwordValidation = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$]).{8,20}$")
+				.matcher(password).matches();
+
+		if (emailValidation && passwordValidation) {
+			User u = repos.findById(email);
+
+			if (u != null) {
+				if (u.getPassword().equals(password)) {
+					return "LogInResponse.jsp";
+				} else {
+					return "errorLogIn.jsp";
+				}
 			} else {
 				return "errorLogIn.jsp";
 			}
