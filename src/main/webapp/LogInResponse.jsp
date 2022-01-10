@@ -1,11 +1,11 @@
-<%@ page language="java" import="com.company.jws.JWS.web.*,com.company.jws.JWS.entity.*" isELIgnored="false" %>
+<%@ page language="java" import="com.company.jws.JWS.web.LogInUser,com.company.jws.JWS.entity.*" isELIgnored="false" %>
 
 <!DOCTYPE html>
 <html>
 	<body>
-		<%@ include file="session-header.html" %>
+		<%@ include file="session-header.html" %>	
 		<br>
-		<h1 class="font-monospace" align="center">Hello ${param.signinInputEmail} </h1>
+		<h1 class="font-monospace" align="center"> Welcome </h1>
 		<%@ include file="footer-html.html" %>
 	</body>
 </html>
