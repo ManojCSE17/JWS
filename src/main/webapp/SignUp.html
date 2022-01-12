@@ -39,42 +39,42 @@
 		<main class="d-flex justify-content-center">
 			<div class="mt-0 p-5 bg-light col-sm-5 rounded">				
 				<form method="POST" action="signup" class="needs-validation" novalidate>
+					<div class="mb-3 text-center bg-danger" id="errorSignUp"></div>
+					
 					<div class="mb-3 text-start">
 				    	<label for="signupFullName" class="form-label">Full Name</label>
-				    	<input type="text" class="form-control" id="signupFullName" required>
+				    	<input type="text" class="form-control" id="signupFullName" name="signupFullName" required>
 				    	<div class="invalid-feedback">Please provide valid name</div>
 				  	</div>
 					
 					<div class="mb-3 container">
 						<div class="row">
 							<div class="text-start form-check col">
-								<input class="form-check-input" type="radio" name="signupGender" id="signupMale" required>
-							  	<label class="form-check-label" for="signupMale">Male</label>
+								<input class="form-check-input" type="radio" name="signupGender" value="Male" required>Male
 							</div>
 							
 							<div class="text-start form-check col">
-								<input class="form-check-input" type="radio" name="signupGender" id="signupFemale">
-							  	<label class="form-check-label" for="signupFemale">Female</label>
+								<input class="form-check-input" type="radio" name="signupGender" value="Female">Female
 							</div>
 						</div>
 					</div>
 					
 					<div class="mb-3 text-start">
 				    	<label for="signupInputEmail" class="form-label">Email address</label>
-				    	<input type="email" placeholder="name@company.com" class="form-control" id="signupInputEmail" aria-describedby="emailHelp" required>
+				    	<input type="email" placeholder="name@company.com" class="form-control" name="signupInputEmail" id="signupInputEmail" aria-describedby="emailHelp" required>
 				    	<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 				    	<div class="invalid-feedback">Please provide valid email</div>
 				  	</div>
 				  	
 				  	<div class="mb-3 text-start">
 				    	<label for="signupInputPassword" class="form-label">Password</label>
-				    	<input type="password" class="form-control" id="signupInputPassword" required>
+				    	<input type="password" class="form-control" name="signupInputPassword" id="signupInputPassword" required>
 				    	<div class="invalid-feedback">Password must have atleast one [A-Z] and [a-z] and [0-9] and [@,$,#]</div>
 				  	</div>
 				  	
 				  	<div class="mb-5 text-start">
 				    	<label for="signupConfirmPassword" class="form-label">Confirm Password</label>
-				    	<input type="password" class="form-control" id="signupConfirmPassword" required>
+				    	<input type="password" class="form-control" name="signupConfirmPassword" id="signupConfirmPassword" required>
 				    	<div class="invalid-feedback">Please make sure your passwords match</div>
 				  	</div>
 				  	
