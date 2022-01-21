@@ -31,7 +31,6 @@ public class JwsController {
 	public String sendResponse() {
 		if (doc != null) {
 			String h = doc.toString();
-			// Removing Page
 			doc = null;
 			return h;
 		}
